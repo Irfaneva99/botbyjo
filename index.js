@@ -81,8 +81,7 @@ async function startjobotz() {
     jobotz.ws.on('CB:call', async (json) => {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
-    let pa7rick = await jobotz.sendMessage(callerId, global.ipan)
-    jobotz.sendMessage(callerId, { text: ` ￴ ￴`}, { quoted : pa7rick })
+    jobotz.sendMessage(callerId, { text: ` ￴ ￴`})
     await sleep(8000)
     await jobotz.updateBlockStatus(callerId, "unblock")
     }
