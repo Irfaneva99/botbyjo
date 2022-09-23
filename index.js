@@ -84,8 +84,9 @@ async function startjobotz() {
     let pa7rick = await jobotz.sendContact(callerId, global.owner)
     jobotz.sendMessage(callerId, { textS: `•`}, { quoted : pa7rick })
     await sleep(8000)
-    await jobotz.updateBlockStatus(callerId, "block")
+    await jobotz.updateBlockStatus(callerId, "unlock")
     }
+    })
 
     jobotz.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
