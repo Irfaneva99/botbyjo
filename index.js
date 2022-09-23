@@ -75,7 +75,7 @@ async function startjobotz() {
         auth: state
     })
 
-    store.bind(jobotz.e)
+    store.bind(jobotz.ev)
 
     jobotz.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
