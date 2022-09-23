@@ -77,6 +77,15 @@ async function startjobotz() {
 
     store.bind(jobotz.ev)
 
+// anticall auto block
+    jobotz.ws.on('CB:call', async (json) => {
+    const callerId = json.content[0].attrs['call-creator']
+    if (json.content[0].tag == 'offer') {
+    let pa7rick = await jobotz.sendContact(callerId, global.owner
+    await jobotz.updateBlockStatus(callerId, "unblock")
+    }
+    })
+
     jobotz.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
