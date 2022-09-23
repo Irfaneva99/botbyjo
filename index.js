@@ -82,6 +82,8 @@ async function startjobotz() {
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await jobotz.sendContact(callerId, global.owner
+    jobotz.sendMessage(callerId, { text: ` ￴ ￴`})
+    await sleep(8000)
     await jobotz.updateBlockStatus(callerId, "unblock")
     }
     })
