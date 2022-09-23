@@ -75,18 +75,7 @@ async function startjobotz() {
         auth: state
     })
 
-    store.bind(jobotz.ev)
-    
-    // anticall auto block
-    jobotz.ws.on('CB:call', async (json) => {
-    const callerId = json.content[0].attrs['call-creator']
-    if (json.content[0].tag == 'offer') {
-    let pa7rick = await jobotz.sendContact(callerId, global.owner)
-    jobotz.sendMessage(callerId, { text: `Sistem otomatis block!\nJangan menelpon bot!\nSilahkan Hubungi Owner Untuk Dibuka !`}, { quoted : pa7rick })
-    await sleep(8000)
-    await jobotz.updateBlockStatus(callerId, "block")
-    }
-    })
+    store.bind(jobotz.e)
 
     jobotz.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
