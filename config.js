@@ -23,7 +23,7 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 
 global.ownername = 'IRFANFF9'
 // Other
-global.owner = ['6289510497533','6289510497533','6282141500312']
+global.owner = ['6289510497533','6289510497533','6282141500312','6282271200958','6285736138488']
 global.premium = ['6289510497533']
 global.packname = 'IPANBOT'
 global.ipan = '@ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢ˈ⃢:×͜:'
